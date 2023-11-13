@@ -15,10 +15,17 @@
                 this.description = description;
                 status = waiting;
             }
+            public string Status()
+            {
+                if (status == 0) return "waiting";
+                else if (status == 1) return "active";
+                else if (status == 2) return "done";
+                else if (status == 3) return "deleted";
+                else return "(invalid status)";
+            }
         }
         static void Main(string[] args)
         {
-            // -2. Add a string method for the status
             // -1. Add a print method for the todo item
             //  1. Create a REPL with 'quit':
             //  2. Create dummy todo items
