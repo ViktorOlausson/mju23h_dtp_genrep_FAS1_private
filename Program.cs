@@ -23,10 +23,13 @@
                 else if (status == 3) return "deleted";
                 else return "(invalid status)";
             }
+            public void Print()
+            {
+                Console.WriteLine($"{start,-10} {Status(),-9} {description,-40}");
+            }
         }
         static void Main(string[] args)
         {
-            // -1. Add a print method for the todo item
             //  1. Create a REPL with 'quit':
             //  2. Create dummy todo items
             //  3. Add 'list' that lists all active and waiting tasks
