@@ -30,24 +30,31 @@
         }
         static void Main(string[] args)
         {
-            //  1. Create a REPL with 'quit':
+            //  2. Create dummy todo items
+            todolist = new List<Todo>();
+            todolist.Add(new Todo("Köpa cola"));
+            todolist.Add(new Todo("Köpa julmust"));
+            todolist.Add(new Todo("Betala räkningar"));
 
             string commando = "";
             do
             {
                 Console.Write("> ");
                 commando = Console.ReadLine().ToLower();
-                Console.WriteLine(commando);
 
                 if (commando == "help")
                 {
                     Console.WriteLine("NYI: \n här kommer alla kommandona visas"); //NYI: help kommando: skriva ut alla kommandon som finns i programmet
                 }
+                else if (commando == "list")
+                {
+                    Console.WriteLine("NYI: här kommer alla todo item som är waiting or active visas"); //NYI: här kommer alla todo item som är waiting or active visas
+                }
 
             } while (commando != "quit");
 
 
-            //  2. Create dummy todo items
+
             //  3. Add 'list' that lists all active and waiting tasks
             //  4. Add 'list all' that lists all tasks
             //  5. Add 'new' that enables you to add new tasks
