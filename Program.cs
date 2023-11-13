@@ -48,10 +48,16 @@
                 }
                 else if (commando == "list")
                 {
-                    Console.WriteLine("NYI: här kommer alla todo item som är waiting or active visas"); //NYI: här kommer alla todo item som är waiting or active visas
+                    foreach(Todo task in todolist)
+                    {
+                        if (task.Status() == "waiting" || task.Status() == "active")
+                        {
+                            task.Print();
+                        }
+                    }
                 }
 
-            } while (commando != "quit");
+            } while (commando != "quit");// TODO: om kommando inte finns så ska det skrivas ut
 
 
 
