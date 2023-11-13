@@ -5,10 +5,16 @@
         static List<Todo> todolist;
         class Todo
         {
+            DateTime start;
+            string description;
+            public Todo(string description)
+            {
+                start = DateTime.Now;
+                this.description = description;
+            }
         }
         static void Main(string[] args)
         {
-            // -4. Build a Todo class width a datetime and a description
             // -3. Add a status to the class
             // -2. Add a string method for the class
             // -1. Add a print method for the todo item
