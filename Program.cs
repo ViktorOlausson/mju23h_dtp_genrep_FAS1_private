@@ -38,6 +38,12 @@
                 Console.Write("> ");
                 commando = Console.ReadLine().ToLower();
                 Console.WriteLine(commando);
+
+                if (commando == "help")
+                {
+                    Console.WriteLine("NYI: \n här kommer alla kommandona visas"); //NYI: help kommando: skriva ut alla kommandon som finns i programmet
+                }
+
             } while (commando != "quit");
 
 
